@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer circle -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="black" stroke-width="5"/>
+  
+  <!-- Arrow down -->
+  <line x1="50" y1="25" x2="50" y2="70" stroke="black" stroke-width="8" stroke-linecap="round"/>
+  <polyline points="30,50 50,75 70,50" fill="none" stroke="black" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Line at bottom (platform) -->
+  <line x1="20" y1="75" x2="80" y2="75" stroke="black" stroke-width="8" stroke-linecap="round"/>
+</svg>

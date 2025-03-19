@@ -1,0 +1,208 @@
+@font-face {
+  font-family: Batman;
+  src: url(../assets/fonts/batmfa__.ttf);
+}
+
+@font-face {
+  font-family: Batman-outline;
+  src: url(../assets/fonts/batmfo__.ttf);
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CSS Variables */
+
+:root {
+  /* FONTS */
+  --REGULAR-FF: Batman, sans-serif;
+  --OUTLINE-FF: Batman-outline, sans-serif;
+
+  /* COLORS */
+  --BG-COLOR: #1a1a2e;
+  --CARD-BGCOLOR: #1f2937;
+  --SECONDARY-BLACK: #1b1b1e;
+  --TEXT-COLOR: #f0f0f0;
+  --PRIMARY-COLOR: #8a2be2;
+  --SECONDARY-COLOR: #00ced1;
+  --HIGHLIGHT-COLOR: #ffd700;
+  --HOVER-COLOR: #ffd900d7;
+
+  /* PADDING */
+  --PADDING: 0.8rem;
+
+  /* BORDER */
+  --ROUNDED-SM: 10px;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--REGULAR-FF);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--TEXT-COLOR);
+  background-color: var(--BG-COLOR);
+}
+
+/* UTILITIES */
+.offscreen {
+  transform: translateX(-10000px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button {
+  font: inherit;
+}
+
+/* NAVBAR */
+
+.header__nav {
+  padding: 2rem;
+}
+
+.header__ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+a:any-link {
+  color: var(--BLACK);
+}
+
+.ul__item:hover,
+.ul__item:focus {
+  color: var(--HOVER-COLOR);
+  border-bottom: 2px solid var(--TEXT-COLOR);
+  padding-bottom: 0.5rem;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+}
+
+.main__hero {
+  min-height: 80vh;
+  margin-top: 3rem;
+}
+
+.hero__container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero__info {
+  text-align: center;
+}
+
+.hero__name {
+  color: var(--HIGHLIGHT-COLOR);
+  margin-bottom: 0.3rem;
+}
+
+.hero__headline {
+  font-family: Batman-outline;
+  letter-spacing: 3px;
+  opacity: 0.8;
+}
+
+.hero__work {
+  line-height: 22px;
+  background-color: var(--CARD-BGCOLOR);
+  padding: 2rem 1rem;
+  border-radius: var(--ROUNDED-SM);
+  max-width: 550px;
+  margin: 1rem auto;
+}
+
+.hero__cta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.hero__cta button {
+  padding: var(--PADDING);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero__cta button a {
+  display: block;
+}
+
+.hero__cta button:first-child {
+  background-color: var(--PRIMARY-COLOR);
+}
+
+.hero__cta button:first-child:hover,
+.hero__cta button:last-child:hover {
+  filter: brightness(110%);
+  color: var(--SECONDARY-BLACK);
+}
+
+.hero__cta button:last-child {
+  background-color: var(--SECONDARY-COLOR);
+}
+
+.hidden--sm {
+  display: none;
+}
+
+/* Media queries */
+@media screen and (min-width: 648px) {
+  .hero__cta {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__ul {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__hero {
+    margin-top: 5rem;
+  }
+
+  .hero__name {
+    font-size: 2rem;
+  }
+}

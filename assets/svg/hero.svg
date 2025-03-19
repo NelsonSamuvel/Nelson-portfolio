@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#1a1a2e"/>
+  
+  <!-- Abstract Geometric Elements -->
+  <!-- Circles -->
+  <circle cx="150" cy="150" r="80" fill="#242442" opacity="0.7"/>
+  <circle cx="1050" cy="450" r="100" fill="#242442" opacity="0.7"/>
+  
+  <!-- Large Wave -->
+  <path d="M0,300 C200,200 400,450 600,300 C800,150 1000,400 1200,300 L1200,600 L0,600 Z" 
+        fill="#16213e" opacity="0.6"/>
+  
+  <!-- Small Wave -->
+  <path d="M0,350 C150,300 300,400 450,350 C600,300 750,400 900,350 C1050,300 1200,400 1200,350 L1200,600 L0,600 Z" 
+        fill="#0f3460" opacity="0.8"/>
+  
+  <!-- Dots Pattern -->
+  <g fill="#30304d" opacity="0.5">
+    <circle cx="100" cy="100" r="4"/>
+    <circle cx="150" cy="100" r="4"/>
+    <circle cx="200" cy="100" r="4"/>
+    <circle cx="100" cy="150" r="4"/>
+    <circle cx="150" cy="150" r="4"/>
+    <circle cx="200" cy="150" r="4"/>
+    <circle cx="100" cy="200" r="4"/>
+    <circle cx="150" cy="200" r="4"/>
+    <circle cx="200" cy="200" r="4"/>
+    
+    <circle cx="900" cy="400" r="4"/>
+    <circle cx="950" cy="400" r="4"/>
+    <circle cx="1000" cy="400" r="4"/>
+    <circle cx="900" cy="450" r="4"/>
+    <circle cx="950" cy="450" r="4"/>
+    <circle cx="1000" cy="450" r="4"/>
+    <circle cx="900" cy="500" r="4"/>
+    <circle cx="950" cy="500" r="4"/>
+    <circle cx="1000" cy="500" r="4"/>
+  </g>
+  
+  <!-- Grid Lines -->
+  <g stroke="#2c2c54" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    
+    <line x1="100" y1="0" x2="100" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="700" y1="0" x2="700" y2="600"/>
+    <line x1="900" y1="0" x2="900" y2="600"/>
+    <line x1="1100" y1="0" x2="1100" y2="600"/>
+  </g>
+  
+  <!-- Floating Shapes -->
+  <polygon points="850,50 900,150 800,150" fill="#30304d" opacity="0.5"/>
+  <polygon points="300,450 350,550 250,550" fill="#30304d" opacity="0.5"/>
+  
+  <!-- Floating Rectangles -->
+  <rect x="600" y="100" width="100" height="50" rx="10" fill="#e94560" opacity="0.15"/>
+  <rect x="650" y="150" width="70" height="30" rx="5" fill="#e94560" opacity="0.1"/>
+  
+  <!-- Glow Effects -->
+  <circle cx="200" cy="400" r="5" fill="#e94560" opacity="0.6"/>
+  <circle cx="1000" cy="200" r="5" fill="#e94560" opacity="0.6"/>
+  <circle cx="600" cy="500" r="5" fill="#e94560" opacity="0.6"/>
+  
+  <!-- Subtle gradient overlay -->
+  <rect width="1200" height="600" fill="url(#gradient)" opacity="0.2"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <radialGradient id="gradient" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#e94560" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#1a1a2e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
