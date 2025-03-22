@@ -25,14 +25,13 @@
     </header>
     <main class="main">
         <section class="main__hero hero">
-            <img src="assets/svg/hero.svg" alt="hero" class="hero__svg">
             <div class="container">
                 <div class="hero__container">
                     <div class="hero__info">
 
                         <div class="hero__content">
-                            <h1 class="hero__name">Nelson Samuvel</h1>
-                            <small class="hero__headline">Frontend Developer</small>
+                            <h1 class="hero__name nowrap">Nelson Samuvel</h1>
+                            <small class="hero__headline nowrap">Frontend Developer</small>
                         </div>
 
                         <div class="hero__work">
@@ -56,13 +55,17 @@
 
         <section class="main__about about container">
             <h2 class="main__h2">About Me</h2>
+
             <figure class="about__profile">
                 <img src="assets/images/profile.jpeg" alt="Nelson Samuvel Profile" width="200" height="200">
                 <figcaption class="offscreen">Nelson's Profile</figcaption>
             </figure>
 
+
             <p class="about__content">
-                I'm a JavaScript Frontend Developer passionate about building responsive and user-friendly web
+                I'm a <span class="highlight nowrap">JavaScript Frontend Developer</span> passionate about building
+                responsive and user-friendly
+                web
                 applications. I specialize in <span class="about__tech">React, TypeScript, Tailwind CSS, ShadCN, and
                     Supabase,</span>
                 focusing on
@@ -71,24 +74,53 @@
 
         </section>
 
-        <section class="main__skills skills container">
-            <h2 class="main__h2">Skills</h2>
-            <ul class="skills_ul">
-                <li>
-                    <img src="" alt="">
-                </li>
+        <section class="main__skills skills">
+            <div class="container">
 
-            </ul>
+                <h2 class="main__h2">Skills</h2>
+                <ul class="skills__ul">
+                    <li>
+                        <img src="assets/images/HTML5.png" alt="html" width="75" height="75">
+                    </li>
+                    <li>
+                        <img src="assets/images/CSS3.png" alt="html" width="75" height="75">
+                    </li>
+                    <li>
+                        <img src="assets/images/JavaScript.png" alt="html" width="75" height="75">
+                    </li>
+                    <li>
+                        <img src="assets/images/React.png" alt="html" width="75" height="75">
+                    </li>
+                    <li>
+                        <img src="assets/images/Next.js.png" alt="html" width="75" height="75">
+                    </li>
+                    <li>
+                        <img src="assets/images/Tailwind CSS.png" alt="html" width="75" height="75">
+                    </li>
+                    <li>
+                        <img src="assets/images/GitHub.png" alt="html" width="75" height="75">
+                    </li>
 
+                </ul>
+            </div>
         </section>
 
         <section class="main__projects projects container">
             <h2 class="main__h2">My Projects</h2>
             <div class="projects__list">
-
-                <div class="projects__card">
-
+                <div class="card">
+                    <img src="assets/images/cities-haven.jpeg" alt="">
+                    <div class="card__body">
+                        <h3>The Cities Haven</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis recusandae quam at ab ut
+                            dolore pariatur dicta dolores iusto asperiores?</p>
+                    </div>
+                    <div class="card__cta">
+                        <button class="card__live"><a href="">Live</a></button>
+                        <button class="card__github"><a href="">Github</a></button>
+                    </div>
                 </div>
+
             </div>
         </section>
 
