@@ -27,6 +27,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 /* CSS Variables */
@@ -41,8 +42,10 @@ a {
   --CARD-BGCOLOR: #1f2937;
   --SECONDARY-BLACK: #1b1b1e;
   --TEXT-COLOR: #f0f0f0;
-  --PRIMARY-COLOR: #8a2be2;
-  --SECONDARY-COLOR: #00ced1;
+  --PRIMARY-COLOR: rgb(138, 43, 226);
+  --PRIMARY-HOVER-COLOR: rgb(125, 15, 228);
+  --SECONDARY-COLOR: rgb(0, 206, 209);
+  --SECONDARY-HOVER-COLOR: rgb(42, 218, 221);
   --HIGHLIGHT-COLOR: #ffd700;
   --HOVER-COLOR: #ffd900d7;
   --BGACCENT-COLOR: #0f3460;
@@ -55,6 +58,11 @@ a {
 }
 
 /* Global Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--REGULAR-FF);
   font-size: 1rem;
@@ -79,7 +87,9 @@ body {
   padding: 0 20px;
 }
 
-button {
+button,
+input,
+textarea {
   font: inherit;
 }
 
@@ -107,8 +117,6 @@ a:any-link {
 .ul__item:hover,
 .ul__item:focus {
   color: var(--HOVER-COLOR);
-  border-bottom: 2px solid var(--TEXT-COLOR);
-  padding-bottom: 0.5rem;
 }
 
 /* HERO */
@@ -166,8 +174,7 @@ a:any-link {
   padding: 1rem 0;
 }
 
-.hero__cta button {
-  padding: var(--PADDING);
+.hero__cta a {
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
   display: flex;
@@ -175,24 +182,24 @@ a:any-link {
   gap: 1rem;
   align-items: center;
   cursor: pointer;
+  padding: var(--PADDING);
+  color: var(--BG-COLOR);
 }
 
-.hero__cta button a {
-  display: block;
-}
-
-.hero__cta button:first-child {
+.hero__cta a:first-child {
   background-color: var(--PRIMARY-COLOR);
 }
 
-.hero__cta button:first-child:hover,
-.hero__cta button:last-child:hover {
-  filter: brightness(110%);
-  color: var(--SECONDARY-BLACK);
+.hero__cta a:first-child:hover {
+  background-color: var(--PRIMARY-HOVER-COLOR);
 }
 
-.hero__cta button:last-child {
+.hero__cta a:last-child {
   background-color: var(--SECONDARY-COLOR);
+}
+
+.hero__cta a:last-child:hover {
+  background-color: var(--SECONDARY-HOVER-COLOR);
 }
 
 .hidden--sm {
@@ -310,17 +317,165 @@ a:any-link {
 }
 
 .card__cta button {
-  padding: 0.5rem 1rem;
   border-radius: 5px;
   border: none;
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  color: var(--BG-COLOR);
+}
+
+.card__cta a {
+  padding: var(--PADDING);
+}
+
+.card:hover .card__cta button {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card:hover img {
+  opacity: 0.6;
 }
 
 .card__cta button:first-child {
   background-color: var(--PRIMARY-COLOR);
 }
 
+.card__cta button:first-child:hover {
+  background-color: var(--PRIMARY-HOVER-COLOR);
+  color: var(--TEXT-COLOR);
+}
+
 .card__cta button:last-child {
   background-color: var(--SECONDARY-COLOR);
+}
+
+.card__cta button:last-child:hover {
+  background-color: var(--SECONDARY-HOVER-COLOR);
+  color: var(--TEXT-COLOR);
+}
+
+/* CONTACT FORM */
+.main__contact {
+  background-color: var(--CARD-BGCOLOR);
+  padding: 2rem 0;
+}
+
+.contact__form {
+  padding: 0 2.5rem;
+  margin-top: 1.5rem;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.contact__field {
+  margin-bottom: 1.5rem;
+}
+
+.contact__label {
+  color: var(--HOVER-COLOR);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.contact__input {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.contact__input:focus {
+  outline: none;
+}
+
+.contact__btn {
+  padding: 0.5rem;
+  background-color: var(--SECONDARY-COLOR);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--BG-COLOR);
+}
+
+.contact__btn:hover {
+  background-color: var(--SECONDARY-HOVER-COLOR);
+  color: var(--CARD-BGCOLOR);
+}
+
+/* FOOTER */
+.footer {
+  padding: 2rem 2.5rem;
+  font-size: 0.8rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  row-gap: 0.3rem;
+  column-gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer__link:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.footer__link a {
+  color: var(--PRIMARY-COLOR);
+}
+
+.footer__link a span:first-child {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.footer__link a:hover {
+  color: var(--PRIMARY-HOVER-COLOR);
+}
+
+.footer__copy {
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .hero__name {
+    font-size: 1.5rem;
+  }
+
+  .hero__headline {
+    font-size: 1rem;
+  }
+
+  /* Fix card CTA positioning */
+  .card__cta {
+    top: 6rem; /* Adjust based on smaller card size */
+  }
+
+  /* Fix skills section */
+  .skills__ul {
+    gap: 1rem;
+  }
+
+  /* Ensure proper container width */
+  .container {
+    width: 100%;
+  }
+
+  /* Fix hero work section */
+  .hero__work {
+    min-width: 0;
+    width: 90%;
+    padding: 1rem 0.5rem;
+  }
 }
 
 /* Media queries */

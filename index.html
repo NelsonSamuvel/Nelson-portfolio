@@ -7,7 +7,9 @@
     <meta name="description" content="Nelson Samuvel's personal website">
     <title>Nelson Samuvel</title>
     <link rel="shortcut icon" href="assets/images/Batman.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="main.js" defer></script>
 
 </head>
 
@@ -40,14 +42,14 @@
                         </div>
                     </div>
                     <div class="hero__cta">
-                        <button>
+                        <a href="#projects">
                             <img class="cta__icon" src="assets/svg/explore.svg" alt="explore" width="20" height="20">
-                            <a href="#projects">
-
-                                Projects</a></button>
-                        <button>
+                            Projects</button>
+                        </a>
+                        <a href="/Resume_Nelson.pdf" download="NelsonSamuvel.pdf">
                             <img class="cta__icon" src="assets/svg/download.svg" alt="download" width="20" height="20">
                             <span>Resume</span></button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -105,7 +107,7 @@
             </div>
         </section>
 
-        <section class="main__projects projects container">
+        <section id="projects" class="main__projects projects container">
             <h2 class="main__h2">My Projects</h2>
             <div class="projects__list">
                 <div class="card">
@@ -124,36 +126,48 @@
             </div>
         </section>
 
-        <section class="main__contact contact container">
-            <h2>Contact Me</h2>
-            <form action="" class="contact__form">
-                <div>
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Enter your email">
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea rows="5" name="message" id="message" cols="30" rows="10"
-                        placeholder="Enter your message"></textarea>
+        <section class="main__contact contact ">
+            <div class="container">
 
-                </div>
-            </form>
+
+                <h2 class="main__h2">Contact Me</h2>
+                <form action="" class="contact__form">
+                    <div class="contact__field">
+                        <label for="email" class="contact__label">Email</label>
+                        <input class="contact__input" type="text" id="email" name="email"
+                            placeholder="Enter your email">
+                    </div>
+                    <div class="contact__field">
+                        <label class="contact__label" for="message">Message</label>
+                        <textarea class="contact__input" rows="5" name="message" id="message" cols="30" rows="10"
+                            placeholder="Enter your message"></textarea>
+                    </div>
+                    <button class="contact__btn">submit</button>
+                </form>
+            </div>
         </section>
-
-
     </main>
+
     <footer class="footer container">
         <div class="footer__links">
-            <div class="footer_link">
-                <p><strong>Email: </strong><span>nelsonsamvl@gmail.com</span></p>
+            <div class="footer__link">
+                <p><a href="mailto:nelsonsamvl@gmail.com" target="_blank"><span><i
+                                class="fa-solid fa-envelope"></i></span><span>Email</span></a></p>
             </div>
-            <div class="footer_link">
-                <p><strong>LinkedIn: </strong><span>https://www.linkedin.com/in/nelson-samuvel</span></p>
+            <div class="footer__link">
+                <p><a href="https://www.linkedin.com/in/nelson-samuvel" target="_blank"><span><i
+                                class="fa-brands fa-linkedin"></i></span><span>LinkedIn</span></a></p>
             </div>
-            <div class="footer_link">
-                <p><strong>Github: </strong><span>https://github.com/NelsonSamuvel</span></p>
+            <div class="footer__link">
+                <p><a href="https://github.com/NelsonSamuvel" target="_blank"><span><i
+                                class="fa-brands fa-github"></i></span><span>Github</span></a></p>
             </div>
         </div>
+
+        <p id="footerCopy" class="footer__copy">&copy; <span id="footerDate"></span> Nelson Samuvel. All rights
+            reserved.
+        </p>
+
     </footer>
 
 </body>
